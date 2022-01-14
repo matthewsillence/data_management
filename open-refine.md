@@ -150,15 +150,13 @@ N-grams are those text strings of values (in this particular case, characters) t
 
 ![The n-gram fingerprint method](<.gitbook/assets/Screenshot 2022-01-14 at 14.44.40.png>)
 
-You should see that there are now several examples of names that have appeared in the window. These are bigrams (n=2). Open Refine has managed to find five potential clusters of very similar names, and you can even see how many rows in the data table are affected (15 in total).
+You should see that there are now several examples of names that have appeared in the window. These are bigrams (n=2). Open Refine has managed to find ten potential clusters of very similar names, and you can even see how many rows in the data table are affected in brackets next to each clustered value.
 
-It has also picked up the Giovanfrancesco Bonomi example we spotted earlier, which is good news! We have a chance to correct these values so that they follow a standard. Clicking on the ‘New Cell Value’ field allows you to define how you would like the new values to appear in all of the affected cells. For this purpose, we will stick with the comma separated approach, and also close the hyphenation so that the dates are linked with no white space between them. For example: ’De Petris , Franciscum , , ‘ becomes ‘De Petris,Franciscum,,’ and ‘Tolomei,Claudio,Bishop,1492-1555/6’ becomes ‘Tolomei,Claudio,Bishop,,1492-1555/6’ (to ensure that the double commas remain in place).
+We have a chance to correct these values so that they follow a standard. Clicking on the ‘New Cell Value’ field allows you to define how you would like the new values to appear in all of the affected cells. For this purpose, we will stick with the comma separated approach, and also close the hyphenation so that the dates are linked with no white space between them. For example: ’De Tarsia, Pablo Antonio , Abbot‘ becomes ‘De Tarsia, Pablo Antonio, Abbot’ and ‘Della Porta,Giambattista,,1535? - 1615’ becomes ‘Della Porta,Giambattista,,1535?-1615’ (to ensure that the double commas remain in place).
 
-Make the necessary changes to each value and ensure that the ‘Merge’ boxes are selected. Then click on ‘Merge Selected & Re-Cluster’. Open Refine will tell you that it has edited 15 cells.
+Make the necessary changes to each value and ensure that the ‘Merge’ boxes are selected. Then click on ‘Merge Selected & Re-Cluster’. Open Refine will tell you that it has edited 51 cells.
 
-![](.gitbook/assets/15.png)
-
-You will also be able to see that the number of ‘Contributors’ faceted has changed from 261 to 256 - this is because there were five clusters identified and corrected. Have a look through the list of other names and see if there are any other errors or inconsistencies that you would want to correct.
+You will also be able to see that the number of ‘Authors’ faceted has changed from 432 to 422 because ten clusters have been amended and corrected. Have a look through the list of other names and see if there are any other errors or inconsistencies that you would want to correct.
 
 ## 7. Exploring Facets: Titles
 
