@@ -312,7 +312,7 @@ This will open a new window with a series of options about which columns of data
 
 Based on the exercises in this workbook we will select the following:
 
-* Contributors - ItacPersonIteam
+* Authors - ItacPersonItem
 * ShortTitle
 * PublicationYear
 * Subjects
