@@ -124,35 +124,31 @@ To exclude the 3553 blank items, place your cursor over ‘false’ and click on
 
 N.B. This has not deleted the data. Only transformations made to the data can remove records. In a sense, we have just emphasised one facet of the dataset to work on for now, and this is a very helpful function of Open Refine. It means that we can focus on different aspects at different times.
 
-Now we have focused on the 911 items, we need to look at the way that the data have been inputted into the relevant names columns. Remember that these are not called ‘names’, but are in fact considered as ‘contributors’. Looking at the first ‘Contributor’ column on the first record, we can see that there is no known contributor to that work (the cell is blank), but there is a censor and there are dedicatees.
+Now we have focused on the 911 items, we need to look at the way that the data have been inputted into the relevant names columns. Remember that these are not called ‘names’, but are in fact considered as ‘contributors’. Looking at the first ‘Contributor’ column on the first record, we can see that there is no known contributor to that work (the cell is blank), but there is a censor and there are dedicatees. There is an 'Authors' column.
 
-Moving to the next record down, there is a contributor listed, and in the third record on the list.
+Looking more closely at the format of the name, we can see how it has been entered: ‘Mariani,Mario,,1634-1709’. This may have been deliberate, to follow a standard of values separated by commas, but we need to know more about the way personal names have been created in this dataset as inconsistencies in spelling or formatting may lead to problems later on.
 
-![](.gitbook/assets/11.png)
+One of the ways of understanding where the errors might be is to run a facet on the the ‘Authors' column. As before, click on the drop-down box on this column, and select Facet > Text facet. Another panel will appear on the left hand side of the screen with 261 choices. These are the 261 contributors that appear in the records.
 
-Looking more closely at the format of the name, we can see how it has been entered: ‘Barone,Francesco,,1622-1705’. This may have been deliberate, to follow a standard of values separated by commas, but we need to know more about the way personal names have been created in this dataset as inconsistencies in spelling or formatting may lead to problems later on.
+![The text facet pane](<.gitbook/assets/Screenshot 2022-01-14 at 14.36.44.png>)
 
-One of the ways of understanding where the errors might be is to run a facet on the the ‘Contributor’ column. As before, click on the drop-down box on this column, and select Facet > Text facet. Another panel will appear on the left hand side of the screen with 261 choices. These are the 261 contributors that appear in the records.
+In general, the comma-separated format seems consistent, but you may notice that some of the date ranges of the contributors and their titles are formatted in slightly different ways. For example, you might have spotted the spacing either side of the hyphen (or what is sometimes termed an ‘en dash’) in a date range (e.g. ‘1622 - 1668’ versus ‘1607-1681’) or the use of a vertical line between titles (e.g. ‘Cibo,Carlo,Marquis of Carrara|Duke of Aiello,1581-1662’).
 
-![](.gitbook/assets/12.png)
-
-In general, the comma-separated format seems consistent, but you may notice that some of the date ranges of the contributors and their titles are formatted in slightly different ways. For example, you might have spotted the spacing either side of the hyphen (or what is sometimes termed an ‘en dash’) in a date range (e.g. ‘1609 - 1657’ versus ‘1552-1638’) or the use of a vertical line between titles (e.g. ‘Cibo,Carlo,Marquis of Carrara|Duke of Aiello,1581-1662’).
-
-The contributor data, therefore, is not particularly standardized. There are even some possible duplicates due to these variations. Giovanfrancesco Bonomi, for example, seems to appear twice because of the different hyphenation of the date ranges. If we wanted to analyse the contributors accurately, we need to ensure that duplicates are removed and these names are normalized.
+The author data, therefore, is not particularly standardized. If we wanted to analyse these names accurately, we need to ensure that they are normalized.
 
 ## 6. Clustering
 
 One way of approaching normalization is through **clustering**. Clusters are powerful tools in Open Refine, and provide a a way of grouping similar, but not identical, values across a dataset and summarising them so that changes can be made to the cells. It is not entirely automated - you still need to make decisions about how to transform the data - but it is much quicker than scrolling through 911 records looking for similarities and differences.
 
-From the facet panel, click on the ‘Cluster’ button and a new window will open.
+From the facet pane, click on the ‘Cluster’ button and a new window will open.
 
-![](.gitbook/assets/13.png)
+![The cluster function](<.gitbook/assets/Screenshot 2022-01-14 at 14.42.45.png>)
 
 You may have a message that says ‘No clusters were found with the selected method’. To change the sensitivity, we will use an ’n-gram fingerprint’ method. You can learn more about the theory behind this method and others here: [https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth#n-gram-fingerprint](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth#n-gram-fingerprint).
 
-N-grams, of course, are those text strings of values (in this particular case, characters) that can be matched in datasets. Open Refine is using them as a probabilistic model, and this method is helpful because it returns more false positives than the standard fingerprint method, so you are less likely to miss errors.
+N-grams are those text strings of values (in this particular case, characters) that can be matched in datasets. Open Refine is using them as a probabilistic model, and this method is helpful because it returns more false positives than the standard fingerprint method, so you are less likely to miss errors.
 
-![](.gitbook/assets/14.png)
+![The n-gram fingerprint method](<.gitbook/assets/Screenshot 2022-01-14 at 14.44.40.png>)
 
 You should see that there are now several examples of names that have appeared in the window. These are bigrams (n=2). Open Refine has managed to find five potential clusters of very similar names, and you can even see how many rows in the data table are affected (15 in total).
 

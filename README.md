@@ -6,31 +6,29 @@ description: >-
 
 # Information Capture and Creation
 
-### Thinking about inputs <a id="thinking-about-inputs"></a>
+### Thinking about inputs <a href="#thinking-about-inputs" id="thinking-about-inputs"></a>
 
-Think about the information you are accessing for your research, list everything that you are capturing \(e.g. archival sources\) and creating \(e.g. transcribed and translated archival sources\). Some of these might seem like the same thing. Don't worry about that for now. If you prefer, you could lay out this information visually, like so:
+Think about the information you are accessing for your research, list everything that you are capturing (e.g. archival sources) and creating (e.g. transcribed and translated archival sources). Some of these might seem like the same thing. Don't worry about that for now. If you prefer, you could lay out this information visually, like so:
 
-![](.gitbook/assets/capture_creation.png)
-
-
+![](.gitbook/assets/capture\_creation.png)
 
 A diagram showing the relationships between information captured and created.
 
 Some of the information you have identified might be very specific, and some of it might be very general. For instance, the content of a 15th-century will is very specific because the researcher intends to analyse that content in some way. The thesis bibliography, however, is primarily for reference purposes, to evidence the sources the researcher has used.
 
-### Information versus data <a id="information-versus-data"></a>
+### Information versus data <a href="#information-versus-data" id="information-versus-data"></a>
 
-Research information, whether very specific or generic, is normally meaningful for the researcher and other people. The term 'data' is often seen as a synonym for information, but in the following exercises, we will try to think in terms of data and metadata \(data about data\). Data can be productively understood as units of information. These units might be very granular, or 'discrete' such as characters and numbers. In the humanities, we rarely devote time to thinking about these units of information, but in digital media, they are very important as they can take on linear, hierarchical and multi-relational structures \(Schöch 2013\).
+Research information, whether very specific or generic, is normally meaningful for the researcher and other people. The term 'data' is often seen as a synonym for information, but in the following exercises, we will try to think in terms of data and metadata (data about data). Data can be productively understood as units of information. These units might be very granular, or 'discrete' such as characters and numbers. In the humanities, we rarely devote time to thinking about these units of information, but in digital media, they are very important as they can take on linear, hierarchical and multi-relational structures (Schöch 2013).
 
-### Unstructured and structured data <a id="unstructured-and-structured-data"></a>
+### Unstructured and structured data <a href="#unstructured-and-structured-data" id="unstructured-and-structured-data"></a>
 
 Thinking in terms of data allows researchers to better understand the information that they capture and create in the research process. One of the most important questions to ask is whether the data are unstructured or structured. The most obvious form of structured data would be a table of names, addresses and telephone numbers. Each column of the table contains a specific form of data that has certain conventions and properties. For example, a name is a string of characters, but a full name in that column might be formatted in a particular way; for instance, surname then a comma, then the first name. A telephone number is also likely to be a string, consisting of a country code, area code and then the specific line number or extension.
 
-| Name | Address | Telephone |
-| :--- | :--- | :--- |
-| Bloggs, Joe | Faculty of Arts and Humanities, University of East Anglia, Norwich, NR4 7TJ, United Kingdom | +44\(0\)1603 000000 |
+| Name        | Address                                                                                     | Telephone         |
+| ----------- | ------------------------------------------------------------------------------------------- | ----------------- |
+| Bloggs, Joe | Faculty of Arts and Humanities, University of East Anglia, Norwich, NR4 7TJ, United Kingdom | +44(0)1603 000000 |
 
-Unstructured data can be more challenging to define, but in some ways it can be found in some of our most common forms of communication. E-mail messages, blog posts, an interview transcript or translation of a 15th-century will, are all forms of unstructured data. They may contain elements found in structured data \(such as text strings\), but they do not conform to data model: the conventions and properties that allow data to be categorised and analysed.
+Unstructured data can be more challenging to define, but in some ways it can be found in some of our most common forms of communication. E-mail messages, blog posts, an interview transcript or translation of a 15th-century will, are all forms of unstructured data. They may contain elements found in structured data (such as text strings), but they do not conform to data model: the conventions and properties that allow data to be categorised and analysed.
 
 > Dear David,
 >
@@ -52,7 +50,7 @@ Think about your own research project and try to answer the following questions:
 
 If you answered yes to any of the questions above, then you will be using structured data in some form.
 
-### Exploring datasets <a id="exploring-datasets"></a>
+### Exploring datasets <a href="#exploring-datasets" id="exploring-datasets"></a>
 
 In these exercises, we will be using some data from the British Library. The first is a dataset that includes keylogging data from the author C. M. Taylor. You can learn more about this collection here: [https://data.bl.uk/cmtaylorkeylogging/](https://data.bl.uk/cmtaylorkeylogging/) and download the first part of the dataset from here: [https://data.bl.uk/cmtaylorkeylogging/](https://data.bl.uk/cmtaylorkeylogging/)​
 
@@ -60,11 +58,11 @@ Unzip the file and open the folder containing the key logs and open the first fe
 
 * What kind of data do these files contain?
 
-### Structuring data <a id="structuring-data"></a>
+### Structuring data <a href="#structuring-data" id="structuring-data"></a>
 
 The first file in the top-level folder is a .txt file, and it contains a significant amount of standardised data. We can see dates, time codes, titles, keystrokes and the application on the author's computer that was running at that time.
 
-```text
+```
 Start               Title                                 Keystrokes Application
 ------------------- ------------------------------------- ---------- -----------
 07/11/2014 16:09:17 Battery Meter                                 42 Explorer   
@@ -98,14 +96,13 @@ Start               Title                                 Keystrokes Application
 17/10/2014 16:16:18 Find & Replace                                 8 Soffice    
 17/10/2014 14:42:49 Book Nine.odt - OpenOffice.org Writer     21,493 Soffice    
 17/10/2014 09:10:27 Book Nine.odt - OpenOffice.org Writer     18,426 Soffice    
-
 ```
 
 This file is a good example of metadata, i.e. data about data, in this case, data that describes that 31 files of key log data.
 
 The files themselves, however, are far less structured. Here is an example from the first file '1.rtf':
 
-```text
+```
 Keystrokes Typed
 
 Application: Soffice
@@ -154,47 +151,43 @@ she<RIGHT:7><DOWN><LEFT:36><RIGHT:14> She <RIGHT:36><UP><LEFT:24>the overground 
  <CTRL+S><CTRL+S>
 <13:00>
 
-
 ```
 
 A simple way of demonstrating how structured data can be processed more effectively is to import it into a spreadsheet application, such as Microsoft Excel.
 
-Open a new file in Excel, then select File &gt; Import &gt; Text file. Select the document 'CTC1 spector report 1n 20141107.txt' and then select the 'Fixed width' import option. Preview the column locations and select 'Next', then choose to keep the column data format as 'General'. Finally, select 'Finish'.
+Open a new file in Excel, then select File > Import > Text file. Select the document 'CTC1 spector report 1n 20141107.txt' and then select the 'Fixed width' import option. Preview the column locations and select 'Next', then choose to keep the column data format as 'General'. Finally, select 'Finish'.
 
 Your imported data should resemble this format:
 
-| Start | ​ | Title | Keystrokes | Application |
-| :--- | :--- | :--- | :--- | :--- |
+| Start           | ​               | Title           | Keystrokes      | Application     |
 | --------------- | --------------- | --------------- | --------------- | --------------- |
-| 07/11/2014 | 16:09:17 | Battery meter | 42 | Explorer |
-| ... | ​ | ​ | ​ | ​ |
+| --------------- | --------------- | --------------- | --------------- | --------------- |
+| 07/11/2014      | 16:09:17        | Battery meter   | 42              | Explorer        |
+| ...             | ​               | ​               | ​               | ​               |
 
-With this tabulated data, it is very easy to generate statistics, such as the number of different keystrokes in each document, such as 'DELETE', or the number of occurrences of certain words in that part of the manuscript. If we wanted to drill down into the unstructured data \(the .rtf files\), then we would need to find a way of structuring the data so that it would be extracted and meaningfully tabulated. This could be down manually, but over large numbers of files, this would be very time-consuming.
+With this tabulated data, it is very easy to generate statistics, such as the number of different keystrokes in each document, such as 'DELETE', or the number of occurrences of certain words in that part of the manuscript. If we wanted to drill down into the unstructured data (the .rtf files), then we would need to find a way of structuring the data so that it would be extracted and meaningfully tabulated. This could be down manually, but over large numbers of files, this would be very time-consuming.
 
 ## Big data and smart data
 
-Schöch \(2013\) argues that there are two general types of data, which depends on the intersection of two general characteristics: structure and size. Generally unstructured data, which voluminous, would be 'big data'. Smart data is generally more structured and smaller. This latter type is probably more common within the humanities. Scholarly digital editions are a good example of this. For example, the Catalogue of Digital Editions: [https://dig-ed-cat.acdh.oeaw.ac.at/](https://dig-ed-cat.acdh.oeaw.ac.at/) provides a helpful repository of details of projects that have used more structured approaches to data, which includes [XML](https://www.w3schools.com/xml/xml_whatis.asp) \(Extensible Markup Language\) and [TEI](https://tei-c.org/guidelines/) \(the Text Encoding Inititiave\).
+Schöch (2013) argues that there are two general types of data, which depends on the intersection of two general characteristics: structure and size. Generally unstructured data, which voluminous, would be 'big data'. Smart data is generally more structured and smaller. This latter type is probably more common within the humanities. Scholarly digital editions are a good example of this. For example, the Catalogue of Digital Editions: [https://dig-ed-cat.acdh.oeaw.ac.at/](https://dig-ed-cat.acdh.oeaw.ac.at) provides a helpful repository of details of projects that have used more structured approaches to data, which includes [XML](https://www.w3schools.com/xml/xml\_whatis.asp) (Extensible Markup Language) and [TEI](https://tei-c.org/guidelines/) (the Text Encoding Inititiave).
 
-Although the example of the key logging data above may not seem structured, it is possible to identify features of a structure, such as the time stamps and the recurring keystrokes, which are placed in angle brackets: '&lt;' and '&gt;'. With the appropriate interpretive [schema](https://www.w3schools.com/xml/schema_intro.asp), which describes the structure of a document, it would resemble Schöch's definition of 'smart data'.
+Although the example of the key logging data above may not seem structured, it is possible to identify features of a structure, such as the time stamps and the recurring keystrokes, which are placed in angle brackets: '<' and '>'. With the appropriate interpretive [schema](https://www.w3schools.com/xml/schema\_intro.asp), which describes the structure of a document, it would resemble Schöch's definition of 'smart data'.
 
 ## Understanding 'messy' data
 
-Structure is one aspect of data, but even structured data can have problems. Data can easily be inconsistent or incomplete. Such errors can be introduced by humans \(input errors\) or sometimes through automation, such as OCR \(optical character recognition\), which constitute processing errors.
+Structure is one aspect of data, but even structured data can have problems. Data can easily be inconsistent or incomplete. Such errors can be introduced by humans (input errors) or sometimes through automation, such as OCR (optical character recognition), which constitute processing errors.
 
 Can you spot the differences in this table of publications held in different libraries?
 
-| Name | Publication Location | Publisher | Library |
-| :--- | :--- | :--- | :--- |
-| Bloggs, Joe | Princeton, NJ | Princeton University Press | British Library |
-| Bloggs, J. | Princeton, NJ | Princeton University Press | Cambridge University Library |
-| Bloggs,Joe | Princeton, NJ | Princeton University Press | Durham University Library |
-| Bloggs,J | Princeton, NJ | Princeton University Press | Institute of Historical Research |
+| Name        | Publication Location | Publisher                  | Library                          |
+| ----------- | -------------------- | -------------------------- | -------------------------------- |
+| Bloggs, Joe | Princeton, NJ        | Princeton University Press | British Library                  |
+| Bloggs, J.  | Princeton, NJ        | Princeton University Press | Cambridge University Library     |
+| Bloggs,Joe  | Princeton, NJ        | Princeton University Press | Durham University Library        |
+| Bloggs,J    | Princeton, NJ        | Princeton University Press | Institute of Historical Research |
 
 Consistency in data allows for more accurate analysis, and is inevitably more useful for future researchers. Incomplete data are also problematic, particularly when analysed computationally, and it may be difficult to know whether or not the data were in fact not available, or were simply omitted by mistake or through choice.
 
-Data scientists often refer to 'messy' or 'dirty' data, which may be a combination of a lack of structure and inconsistency or incompleteness. Fortunately, there are tools available to assist with this process, such as [Open Refine](https://openrefine.org/).
+Data scientists often refer to 'messy' or 'dirty' data, which may be a combination of a lack of structure and inconsistency or incompleteness. Fortunately, there are tools available to assist with this process, such as [Open Refine](https://openrefine.org).
 
 This concludes the first section of the workbook. The next section will be completed in the workshop.
-
- 
-
