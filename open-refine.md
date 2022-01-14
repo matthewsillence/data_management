@@ -16,7 +16,7 @@ All errors are my own.
 
 Matthew Sillence
 
-January 2019 (updated April 2020)
+January 2019 (updated April 2020, January 2022)
 
 ## 1. Introduction
 
